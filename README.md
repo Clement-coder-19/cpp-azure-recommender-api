@@ -64,10 +64,10 @@ Le service est configuré avec un mécanisme d'autoscaling dynamique pour valide
 ---
 ## Stratégie de Déploiement et d'Économie des Ressources
 
-Pour optimiser l'utilisation de mon crédit de test Azure et éviter le gaspillage de ressources laissées actives inutilement, le cycle de vie de l'infrastructure est géré de façon dynamique :
+Pour optimiser l'utilisation du crédit de test Azure et éviter le gaspillage de ressources laissées actives inutilement, le cycle de vie de l'infrastructure est géré de façon dynamique :
 * L'infrastructure sous-jacente est provisionnée et détruite via des scripts Azure CLI.
 * Le pipeline GitHub Actions permet une reconstruction automatique et une mise en production de l'application à l'identique rapidement.
-* Les preuves de fonctionnement en conditions réelles (portail Azure, exécution du pipeline et réponses de l'API) sont documentées via les captures d'écran ci-dessous.
+* Les preuves de fonctionnement en conditions réelles (portail Azure, exécution du pipeline et réponses de l'API) sont documentées via les captures d'écran ci-dessus.
 
 ---
 
