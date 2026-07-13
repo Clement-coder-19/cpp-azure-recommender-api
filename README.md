@@ -56,8 +56,8 @@ Le service est configuré avec un mécanisme d'autoscaling dynamique pour valide
 > **Capture 4 : Journaux de la console (Log Stream)**
 > ![Logs de l'application](images/screenshot-logs.png)
 
-> **Capture 5 : API en production dans le navigateur**
-> url: https://recommender-app.bluebush-7d4cfb47.francecentral.azurecontainerapps.io/recommend?user_id=1
+> **Capture 5 : API en production dans le navigateur **
+> url (en arrêt pour économiser les ressources): https://recommender-app.bluebush-7d4cfb47.francecentral.azurecontainerapps.io/recommend?user_id=1
 > L'API retourne avec succès les recommandations pour l'utilisateur `user_id=1`(avec comme dataset "data.txt"). Il est également possible d'ajouter le paramètre optionnel `&topN=X` pour limiter le nombre maximal de résultats retournés
 > ![API Live](images/screenshot-api-response.png)
 
