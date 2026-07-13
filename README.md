@@ -25,12 +25,11 @@ Le système charge les données en mémoire et indexe les utilisateurs. Les éta
 3. **Prédiction et filtrage :** Moyenne pondérée des scores sur les items non encore évalués par l'utilisateur cible, tri, puis extraction du Top-N.
 
 ---
-## 🔄 Automatisation CI/CD (GitHub Actions)
+## Automatisation CI/CD (GitHub Actions)
 
 À chaque `push` sur la branche `main`, un workflow automatisé prend le relais pour compiler le code C++, générer le livrable Docker et mettre à jour l'infrastructure Azure sans interruption de service.
 
 > **Capture 1 : Pipeline CI/CD au vert**
-> *(Insère ici ta capture d'écran de l'onglet GitHub Actions montrant le job "build-and-deploy" entièrement validé)*
 > ![Pipeline GitHub Actions](images/screenshot-github-actions.png)
 
 ---
@@ -58,6 +57,8 @@ Le service est configuré avec un mécanisme d'autoscaling dynamique pour valide
 > ![Logs de l'application](images/screenshot-logs.png)
 
 > **Capture 5 : API en production dans le navigateur**
+> url: https://recommender-app.bluebush-7d4cfb47.francecentral.azurecontainerapps.io/recommend?user_id=1
+> L'API retourne avec succès les recommandations pour l'utilisateur `user_id=1`(avec comme dataset "data.txt"). Il est également possible d'ajouter le paramètre optionnel `&topN=X` pour limiter le nombre maximal de résultats retournés
 > ![API Live](images/screenshot-api-response.png)
 
 ---
