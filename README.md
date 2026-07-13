@@ -25,7 +25,42 @@ Le système charge les données en mémoire et indexe les utilisateurs. Les éta
 3. **Prédiction et filtrage :** Moyenne pondérée des scores sur les items non encore évalués par l'utilisateur cible, tri, puis extraction du Top-N.
 
 ---
+## 🔄 Automatisation CI/CD (GitHub Actions)
 
+À chaque `push` sur la branche `main`, un workflow automatisé prend le relais pour compiler le code C++, générer le livrable Docker et mettre à jour l'infrastructure Azure sans interruption de service.
+
+> **Capture 1 : Pipeline CI/CD au vert**
+> *(Insère ici ta capture d'écran de l'onglet GitHub Actions montrant le job "build-and-deploy" entièrement validé)*
+> ![Pipeline GitHub Actions](images/screenshot-github-actions.png)
+
+---
+
+## Déploiement Cloud (Microsoft Azure)
+
+L'application est déployée au sein d'un groupe de ressources dédié localisé dans la région `francecentral`. 
+
+### 1. Vue d'ensemble des ressources provisionnées
+L'architecture s'appuie sur un environnement managé Container Apps couplé à un registre de conteneurs privé (ACR).
+
+> **Capture 2 : Groupe de ressources sur le Portail Azure**
+> ![Ressources Azure](images/screenshot-azure-portal.png)
+
+### 2. Registre d'artefacts (Azure Container Registry)
+L'image finale de production est versionnée et stockée de manière sécurisée.
+
+> **Capture 3 : Répertoire d'images dans l'ACR**
+> ![Azure Container Registry](images/screenshot-acr.png)
+
+### 3. Cycle de vie & Métriques de l'API
+Le service est configuré avec un mécanisme d'autoscaling dynamique pour valider le bon fonctionnement de l'application.
+
+> **Capture 4 : Journaux de la console (Log Stream)**
+> ![Logs de l'application](images/screenshot-logs.png)
+
+> **Capture 5 : API en production dans le navigateur**
+> ![API Live](images/screenshot-api-response.png)
+
+---
 ## Stratégie de Déploiement et d'Économie des Ressources
 
 Pour optimiser l'utilisation de mon crédit de test Azure et éviter le gaspillage de ressources laissées actives inutilement, le cycle de vie de l'infrastructure est géré de façon dynamique :
