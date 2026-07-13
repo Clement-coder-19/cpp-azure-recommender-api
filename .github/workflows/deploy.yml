@@ -38,6 +38,8 @@ jobs:
       uses: azure/container-apps-deploy-action@v1
       with:
         acrName: ${{ secrets.ACR_NAME }}
+        acrUsername: ${{ secrets.ACR_USERNAME }}
+        acrPassword: ${{ secrets.ACR_PASSWORD }}
         containerAppName: recommender-app
         resourceGroup: rg-cpp-recommender
         imageToDeploy: ${{ secrets.ACR_LOGIN_SERVER }}/cpp-recommender:${{ github.sha }}
