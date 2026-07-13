@@ -18,7 +18,7 @@ RUN git clone https://github.com/CrowCpp/Crow.git && \
 COPY main.cpp .
 COPY dataset/ ./dataset/
 
-RUN g++ -O3 main.cpp -o recommender_api -lpthread -lasio
+RUN g++ -O3 main.cpp -o recommender_api -lpthread
 
 FROM ubuntu:24.04
 
