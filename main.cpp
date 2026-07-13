@@ -1,4 +1,4 @@
-#include "crow.h" // Importation de la bibliothèque HTTP Crow
+#include "crow.h" 
 #include <iostream>
 #include <fstream>
 #include <vector>
