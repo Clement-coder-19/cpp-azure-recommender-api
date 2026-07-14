@@ -78,6 +78,7 @@ Le conteneur est configuré pour charger automatiquement les jeux de données d'
 ```bash
 docker build -t cpp-recommender-api .
 docker run -p 8080:8080 cpp-recommender-api
+```
 
 ---
 
